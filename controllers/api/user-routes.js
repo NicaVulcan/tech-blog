@@ -29,9 +29,9 @@ router.get('/:id', (req, res) => {
             {
                 model: Post,
                 attributes: [
-                    'id', 
-                    'title', 
-                    'post_url', 
+                    'id',
+                    'title',
+                    'post_url',
                     'created_at'
                 ],
             },
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
         ]
     })
         .then(userData => {
-            if(!userData) {
+            if (!userData) {
                 res.status(404).json({
                     message: 'User not found!'
                 });
@@ -60,5 +60,66 @@ router.get('/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
+
+//post
+router.post('/', (req, res) => {
+    User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+    })
+        .then(userData => {
+            res.json(userData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+});
+
+//put 
+router.put('/:id', (req, res) => {
+    User.update(req.body, {
+        individualHooks: true,
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(userData => {
+            if (!userData) {
+                res.status(404).json({
+                    message: 'User not found!'
+                });
+                return;
+            }
+            res.json(userData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+//delete
+router.delete('/:id', (req, res) => {
+    User.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(userData => {
+            if (!userData) {
+                res.status(404).json({
+                    message: 'User not found!'
+                });
+                return;
+            }
+            res.json(userData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+})
 
 module.exports = router;
