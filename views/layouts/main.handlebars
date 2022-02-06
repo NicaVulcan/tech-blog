@@ -12,7 +12,13 @@
 <body>
     <header>
         <nav>
-            TECH BLOG!
+            <h1>TECH BLOG!</h1>
+            {{#if loggedIn}}
+            <a href="/dashboard">Dashboard</a>
+            <button id="logout">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
         </nav>
     </header>
     <main>
