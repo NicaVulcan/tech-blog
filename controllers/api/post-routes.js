@@ -41,7 +41,7 @@ router.get('/', (req, res) => {
 
 //get by id
 router.get('/:id', (req, res) => {
-    Post.find({
+    Post.findOne({
         attributes: [
             'id',
             'post_url',
@@ -77,3 +77,65 @@ router.get('/:id', (req, res) => {
         });
 });
 
+//post
+router.post('/', (req, res) => {
+    Post.create({
+        title: req.body.title,
+        post_url: req.body.post_url,
+        user_id: req.body.user_id
+    })
+        .then(postData => res.json(postData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+//put
+router.put('/:id', (req, res) => {
+    Post.update({
+        title: req.body.title
+    },
+    {
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(postData => {
+            if (!postData) {
+                res.status(404).json({
+                    message: "Post not found!"
+                });
+                return;
+            }
+            res.json(postData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+//delete
+router.delete('/:id', (req, res) => {
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(postData => {
+            if(!postData) {
+                res.status(404).json({
+                    message: "Post not found!"
+                });
+                return;
+            }
+            res.json(postData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+module.exports = router;
