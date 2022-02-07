@@ -1,1 +1,11 @@
-<p>posts will go here</p>
+<div>
+    <button>Make a blog entry!</button>
+    <ul>
+        {{#each post as |post|}}
+        <li>
+            post
+            {{> post-info post}}
+        </li>
+        {{/each}}
+    </ul>
+</div>

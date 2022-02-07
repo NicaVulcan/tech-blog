@@ -1,1 +1,12 @@
-<p>single post and respective comments</p>
+{{> post-info post}}
+
+{{#if loggedIn}}
+<form action="">
+    <div>
+        <textarea name="comment-body"></textarea>
+        <button type="submit">Comment!</button>
+    </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}

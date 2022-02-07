@@ -1,1 +1,26 @@
-<p>view post from personal dashboard, edit options</p>
+<section>
+    <a href="/dashboard">
+        <button>Dashboard</button>
+    </a>
+    <form>
+        <div>
+            <input type="text" name="post-title" value="{{post.title}}">
+        </div>
+        <div>
+            <textarea name="post-body" value="{{post.content}}"></textarea>
+        </div>
+        <div>
+            <button type="submit">Save</button>
+            <button>Delete</button>
+        </div>
+    </form>
+</section>
+<section>
+    <form action="">
+        <div>
+            <textarea name="comment-body"></textarea>
+            <button type="submit">Comment!</button>
+        </div>
+    </form>
+    {{> comments post.comments}}
+</section>
