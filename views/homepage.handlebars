@@ -1,9 +1,8 @@
 <div>
     <button>Make a blog entry!</button>
     <ul>
-        {{#each post as |post|}}
+        {{#each posts as |post|}}
         <li>
-            post
             {{> post-info post}}
         </li>
         {{/each}}
