@@ -1,14 +1,14 @@
 <section>
     <h2>Your Dashboard!</h2>
-    <form action="">
+    <form id="add-post-form">
         <h3>Create a new post!</h3>
         <div>
             <label for="post-title">Title</label>
             <input type="text" name="post-title" id="post-title">
         </div>
         <div>
-            <label for="post-content">Title</label>
-            <textarea name="post-content" id="post-content"></textarea>
+            <textarea type="text" name="post-content" id="post-content">
+            </textarea>
         </div>
         <div>
             <button type="submit">Post!</button>
@@ -16,16 +16,17 @@
     </form>
 </section>
 
-{{#if post.length}}
+{{#if posts.length}}
 <section>
     <h2>Your posts!</h2>
-        <ul>
+    <ul>
         {{#each posts as |post|}}
         <li>
-            post
             {{> post-info post}}
         </li>
         {{/each}}
     </ul>
 </section>
 {{/if}}
+
+<script src='/js/create-post.js'></script>
