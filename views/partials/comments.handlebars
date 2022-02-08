@@ -1,7 +1,7 @@
 <div>
     {{#each this}}
     <div>
-        {{user.username}} on (date)
+        {{user.username}} on {{format_date created_at}}
     </div>
     <div>
         {{comment_text}}

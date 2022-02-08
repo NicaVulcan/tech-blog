@@ -1,7 +1,4 @@
 <section>
-    <a href="/dashboard">
-        <button>Dashboard</button>
-    </a>
     <form id="edit-post-form">
         <div>
             <input type="text" name="post-title" id="post-title" value="{{post.title}}">
@@ -22,7 +19,12 @@
             <button type="submit">Comment!</button>
         </div>
     </form>
-    {{> comments post.comments}}
+    <div>
+        <span>
+            {{post.comments.length}} {{format_plural "comment" post.comments.length}}
+        </span>
+        {{> comments post.comments}}
+    </div>
 </section>
 
 <script src="/js/edit-delete-post.js"></script>

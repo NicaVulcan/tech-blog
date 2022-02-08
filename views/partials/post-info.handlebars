@@ -1,4 +1,8 @@
 <article>
+    <p>{{user.username}}</p>
+        <span>
+            on {{format_date created_at}}
+        </span>
     <div>
         <a href="/post/{{id}}">{{title}}</a>
     </div>
@@ -6,6 +10,8 @@
         <p>{{content}}</p>
     </div>
     <div>
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+        <a href="/post/{{id}}">
+            {{comments.length}} {{format_plural "comment" comments.length}}
+        </a>
     </div>
 </article>

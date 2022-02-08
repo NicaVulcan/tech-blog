@@ -1,5 +1,7 @@
 <div>
+    {{#if loggedIn}}
     <button>Make a blog entry!</button>
+    {{/if}}
     <ul>
         {{#each posts as |post|}}
         <li>
