@@ -247,6 +247,45 @@ a.edit-link:hover {
     background: linear-gradient(#af4083, #6b194a, #6b194a);
 }
 
+/* edit post view */
+.edit-post-view {
+    width: 70%;
+    margin: auto;
+}
+.edit-post-view h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 40px;
+    color: var(--main-text-color);
+}
+#edit-post-form {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--text-font);
+    margin-bottom: 40px;
+}
+#edit-post-form input, #add-post-form textarea {
+    font-family: var(--text-font);
+    padding: 5px 15px;
+    margin: 10px 0;
+}
+#edit-post-form #saveBtn {
+    padding: 5px;
+    color: white;
+    background-color: var(--main-color);
+    margin-top: 5px;
+}
+#edit-post-form #delBtn {
+    padding: 5px;
+    color: white;
+    background-color: rgb(209, 27, 27);
+    margin-top: 5px;
+}
+
+
 /* footer */
 footer {
     background-color: var(--main-color);
