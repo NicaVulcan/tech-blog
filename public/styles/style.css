@@ -1,6 +1,8 @@
 /* general */
 :root {
     --main-color: #892b64;
+    --main-text-color: rgb(85, 18, 112);
+    --secondary-text-color: rgb(109, 103, 126);
     --heading-font: 'Teko', sans-serif;
     --text-font: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
 }
@@ -21,7 +23,7 @@ body {
 }
 a {
     text-decoration: none;
-    color: rgb(85, 18, 112);
+    color: var(--main-text-color);
 }
 input, form button, textarea {
     border-radius: 5px;
@@ -117,7 +119,7 @@ nav h1 {
 .post-info-user span {
     font-size: 13px;
     font-weight: 400;
-    color:rgb(109, 103, 126)
+    color:var(--secondary-text-color);
 }
 .post-info-title {
     font-size: 23px;
@@ -131,7 +133,7 @@ nav h1 {
 .post-info-comments {
     font-size: 13px;
     font-weight: 400;
-    color:rgb(109, 103, 126)
+    color: var(--secondary-text-color);
 }
 
 /* single post view */
@@ -162,6 +164,29 @@ nav h1 {
     background-color: rgb(218, 216, 216);
 }
 
+/* comments style */
+.comments-view {
+    width: 100%;
+}
+.single-comment {
+    padding: 8px 10px;
+    border-bottom: lightgray 1px solid;
+}
+.single-comment:last-of-type{
+    border-bottom: none;
+}
+.comment-username {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.comment-username span {
+    color: rgb(192, 189, 189);
+    float: right;
+    font-weight: lighter;
+    font-size: 15px;
+}
 
 footer {
     background-color: var(--main-color);
