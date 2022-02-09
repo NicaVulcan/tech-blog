@@ -100,6 +100,9 @@ nav h1 {
 }
 
 /* post info style */
+.li-post:last-of-type {
+    margin-bottom: 100px;
+}
 .post-info {
     padding: 10px 25px;
     background-color: #eaebed;
@@ -174,6 +177,7 @@ nav h1 {
 }
 .single-comment:last-of-type{
     border-bottom: none;
+    margin-bottom: 100px;
 }
 .comment-username {
     color: var(--main-color);
@@ -188,6 +192,62 @@ nav h1 {
     font-size: 15px;
 }
 
+/* dashboard view style */
+.dashboard-view {
+    width: 70%;
+    margin: auto;
+}
+.dashboard-view h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 40px;
+    color: var(--main-text-color);
+}
+#add-post-form {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--text-font);
+    margin-bottom: 40px;
+}
+#add-post-form input, #add-post-form textarea {
+    font-family: var(--text-font);
+    padding: 5px 15px;
+    margin: 10px 0;
+}
+#add-post-form button {
+    margin: 10px 0;
+    padding: 5px;
+    color: white;
+    background-color: var(--main-color);
+}
+.post-edit-option {
+    list-style: none;
+}
+.post-edit-option li { 
+    display: flex;
+    justify-content: space-between;
+}
+.post-edit-option li div {
+    margin-right: 5px;
+    flex-grow: 1;
+}
+a.edit-link {
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    align-self: center;
+}
+a.edit-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 1px black ;
+    background: linear-gradient(#af4083, #6b194a, #6b194a);
+}
+
+/* footer */
 footer {
     background-color: var(--main-color);
     color: white;
