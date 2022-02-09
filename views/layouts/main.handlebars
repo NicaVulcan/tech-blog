@@ -6,32 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
     <header>
         <nav>
             <h1>TECH BLOG!</h1>
-            {{#if loggedIn}}
-            <a href="/dashboard">
-                Dashboard
-            </a>
-            <button id="logout">
-                Logout
-            </button>
-            {{else}}
-            <a href="/login">
-                Login
-            </a>
-            {{/if}}
+            <div class="nav-links">
+                {{#if loggedIn}}
+                <a href="/" class="nav-link">
+                    Home
+                </a>
+                <a href="/dashboard" class="nav-link">
+                    Dashboard
+                </a>
+                <button id="logout" class="nav-link">
+                    Logout
+                </button>
+                {{else}}
+                <a href="/login" class="nav-link">
+                    Login
+                </a>
+                {{/if}}
+            </div>
         </nav>
     </header>
-    <main>
+    <main class="dynamic-body">
         {{{ body }}}
     </main>
     <footer>
-        Thank you for visiting!!
+        <p>
+            Thank you for visiting!!
+        </p>
     </footer>
     {{#if loggedIn}}
     <script src='/js/logout.js'></script>

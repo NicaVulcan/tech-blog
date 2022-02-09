@@ -1,6 +1,8 @@
-<div>
+<div class="homepage-view">
     {{#if loggedIn}}
-    <button>Make a blog entry!</button>
+    <a href="/dashboard " id="dashBtn">
+        Share something!
+    </a>
     {{/if}}
     <ul>
         {{#each posts as |post|}}

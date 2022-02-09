@@ -1,17 +1,23 @@
-<article>
-    <p>{{user.username}}</p>
-        <span>
-            on {{format_date created_at}}
-        </span>
-    <div>
-        <a href="/post/{{id}}">{{title}}</a>
-    </div>
-    <div>
-        <p>{{content}}</p>
-    </div>
-    <div>
-        <a href="/post/{{id}}">
-            {{comments.length}} {{format_plural "comment" comments.length}}
-        </a>
-    </div>
-</article>
+<a href="/post/{{id}}">
+    <article class="post-info">
+        <div class="post-info-user">
+            <p>
+                {{user.username}}
+                <span>
+                    on {{format_date created_at}}
+                </span>
+            </p>
+        </div>
+        <div class="post-info-title">
+            <p>{{title}}</p>
+        </div>
+        <div class="post-info-content">
+            <p>{{content}}</p>
+        </div>
+        <div class="post-info-comments">
+            <p>
+                {{comments.length}} {{format_plural "comment" comments.length}}
+            </p>
+        </div>
+    </article>
+</a>

@@ -1,14 +1,14 @@
-{{> post-info post}}
+<div class="single-post-view">
+    {{> post-info post}}
 
-{{#if loggedIn}}
-<form id="add-comment-form">
-    <div>
-        <textarea name="comment-body" id="comment-body"></textarea>
-        <button type="submit">Comment!</button>
-    </div>
-</form>
-{{/if}}
+    {{#if loggedIn}}
+    <form id="add-comment-form">
+            <input type="text" name="comment-body" id="comment-body" placeholder="Add a Comment...">
+            <button type="submit">➕</button>
+    </form>
+    {{/if}}
 
-{{> comments post.comments}}
+    {{> comments post.comments}}
+</div>
 
 <script src="/js/add-comment.js"></script>
