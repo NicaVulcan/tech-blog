@@ -2,17 +2,21 @@
     <section>
         <h2>Edit your Post!</h2>
         <form id="edit-post-form">
-                <input type="text" name="post-title" id="post-title" value="{{post.title}}">
-                <textarea name="post-body" id="post-body">  {{post.content}}</textarea>
+            <input type="text" name="post-title" id="post-title" value="{{post.title}}">
+            <textarea name="post-body" id="post-body">  {{post.content}}</textarea>
+            <div class="edit-btn-container">
                 <button type="submit" id="saveBtn">Save</button>
+            </div>
+            <div class="edit-btn-container">
                 <button id="delBtn">Delete</button>
+            </div>
         </form>
     </section>
     <section>
-    <form id="add-comment-form">
+        <form id="add-comment-form">
             <input type="text" name="comment-body" id="comment-body" placeholder="Add a Comment...">
             <button type="submit">➕</button>
-    </form>
+        </form>
         <div>
             {{> comments post.comments}}
         </div>

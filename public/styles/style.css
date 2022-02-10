@@ -217,11 +217,21 @@ nav h1 {
     padding: 5px 15px;
     margin: 10px 0;
 }
+.add-post-btn-container {
+    height: 30px;
+}
 #add-post-form button {
+    width: 100%;
     margin: 10px 0;
     padding: 5px;
     color: white;
     background-color: var(--main-color);
+}
+#add-post-form button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 1px black ;
+    background: linear-gradient(#af4083, #6b194a, #6b194a);
+    border: none;
 }
 .post-edit-option {
     list-style: none;
@@ -278,11 +288,28 @@ a.edit-link:hover {
     background-color: var(--main-color);
     margin-top: 5px;
 }
+.edit-btn-container {
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#edit-post-form #saveBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 1px black ;
+    background: linear-gradient(#af4083, #6b194a, #6b194a);
+    border: none;
+}
 #edit-post-form #delBtn {
     padding: 5px;
     color: white;
     background-color: rgb(209, 27, 27);
     margin-top: 5px;
+}
+#edit-post-form #delBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 1px black ;
+    background: linear-gradient(rgb(240, 56, 56), rgb(177, 24, 24), rgb(177, 24, 24));
+    border: none;
 }
 
 /* login page view */
@@ -313,7 +340,7 @@ a.edit-link:hover {
     height: 25px;
     padding: 2px 15px;
     margin-left: 5px;
-    width: 300px;
+    width: 60%;
     font-family: var(--text-font);
 }
 .login-btn-container {
@@ -349,3 +376,71 @@ footer p {
     margin: auto;
 }
 
+/* media queries */
+/* <768 */
+@media screen and (max-width: 768px) {
+    /* main view */
+    nav {
+        flex-direction: column;
+        height: fit-content;
+    }
+    nav h1 {
+        text-align: center;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .homepage-view,
+    .single-post-view,
+    .dashboard-view,
+    .edit-post-view,
+    .login-page-view {
+        width: 80%;
+    }
+    .form-body, 
+    #add-post-form, 
+    #edit-post-form {
+        width: 80%;
+    }
+    /* login view */
+    .form-body div {
+        width: auto;
+        display: flex;
+        margin: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-body div label {
+        margin: 5px auto;
+    }
+    .form-body div input {
+        width: 100%;
+        margin-left: 0;
+    }
+    .login-btn-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .form-body button {
+        height: 100%;
+        width: 60%;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}
+/* < 575px */
+@media screen and (max-width: 575px) {
+    .homepage-view,
+    .single-post-view,
+    .dashboard-view,
+    .edit-post-view,
+    .login-page-view {
+        width: 90%;
+    }
+    .form-body, 
+    #add-post-form, 
+    #edit-post-form {
+        width: 100%;
+    }
+}
