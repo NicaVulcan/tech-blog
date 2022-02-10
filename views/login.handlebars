@@ -1,35 +1,42 @@
-<form id="login-form">
-    <h3>Sign in to your account!</h3>
-    <div>
-        <label for="email-login">email:</label>
-        <input type="email" id="email-login">
-    </div>
-    <div>
-        <label for="pw-login">password:</label>
-        <input type="password" id="pw-login">
-    </div>
-    <div>
-        <button type="submit">Sign in!</button>
-    </div>
-</form>
+<div class="login-page-view">
+    <form id="login-form">
+        <h3>Sign in to your account!</h3>
+        <div class="form-body">
+            <div>
+                <label for="email-login">email:</label>
+                <input type="email" id="email-login">
+            </div>
+            <div>
+                <label for="pw-login">password:</label>
+                <input type="password" id="pw-login">
+            </div>
+            <div class="login-btn-container">
+                <button type="submit">Sign in!</button>
+            </div>
+        </div>
+    </form>
 
-<form id="signup-form">
-    <h3>Create a new account!</h3>
-    <div>
-        <label for="user-signup">username:</label>
-        <input type="text" id="user-signup">
-    </div>
-    <div>
-        <label for="email-signup">email:</label>
-        <input type="email" id="email-signup">
-    </div>
-    <div>
-        <label for="pw-signup">password:</label>
-        <input type="password" id="pw-signup">
-    </div>
-    <div>
-        <button type="submit">Sign up!</button>
-    </div>
-</form>
+    <form id="signup-form">
+        <h5>OR</h5>
+        <h3>Create a new account!</h3>
+        <div class="form-body">
+            <div>
+                <label for="user-signup">username:</label>
+                <input type="text" id="user-signup">
+            </div>
+            <div>
+                <label for="email-signup">email:</label>
+                <input type="email" id="email-signup">
+            </div>
+            <div>
+                <label for="pw-signup">password:</label>
+                <input type="password" id="pw-signup">
+            </div>
+            <div class="login-btn-container">
+                <button type="submit">Sign up!</button>
+            </div>
+        </div>
+    </form>
+</div>
 
 <script src='/js/login.js'></script>
