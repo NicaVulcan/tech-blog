@@ -18,6 +18,6 @@ Full stack application that allows you to create an account and keep track of po
 - Bcrypt
 ## Website
 [Visit the deployed application here!](https://safe-dusk-00550.herokuapp.com/)
-![image coming soon](img)
+![Sample tech blog home page view](assets/images/tech-blog.png)
 ## Contribution
 Created by CSM
